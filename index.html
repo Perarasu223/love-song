@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Love You Forever</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Private Memory 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body style="margin:0;background:#000;color:#fff;font-family:Arial;text-align:center;">
+<body style="margin:0;background:black;color:white;font-family:Arial;text-align:center;">
 
-  <img src="Img.jpg" style="width:100%;max-width:420px;margin-top:20px;border-radius:14px;">
+<script>
+  var password = prompt("Enter the password 💖");
+  if (password !== "ILoveYou") {
+    document.body.innerHTML = "<h2 style='margin-top:40px;'>Access denied ❌</h2>";
+  }
+</script>
 
-  <h2 style="margin-top:20px;">
-    Love you forever and ever 💖
-  </h2>
+<img src="image.jpg" style="width:100%;max-width:420px;margin-top:20px;border-radius:14px;">
 
-  <audio controls style="width:90%;margin-top:15px;">
-    <source src="song.mp3" type="audio/mpeg">
-  </audio>
+<h2 style="margin-top:20px;">
+  Love you forever and ever 💖
+</h2>
+
+<audio id="song" controls style="width:90%;margin-top:15px;">
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("song");
+  audio.play().catch(() => {
+    console.log("Autoplay blocked, user must tap play");
+  });
+</script>
 
 </body>
 </html>
